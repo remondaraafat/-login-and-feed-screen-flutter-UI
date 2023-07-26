@@ -39,8 +39,5 @@ class MyApp extends StatelessWidget {
     );
   }
 }
-<<<<<<< HEAD
 //commit to add branch test
-=======
 //commit line of test branch
->>>>>>> test
