@@ -13,16 +13,29 @@ class FeedScreen extends StatelessWidget {
           child: Row(
             mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
-              Text(
-                'Back',
-                style: TextStyle(
-                    color: Color(0xFF5DB075),
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500),
+              TextButton(
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(
+                      color: Color(0xFF5DB075),
+             fontSize: 16,
+             fontWeight: FontWeight.w500),
+                ),
+                onPressed: (){
+                  Navigator.of(context).pop();
+                },
+                child: const Text('Back'),
               ),
+              // Text(
+              //   'Back',
+              //   style: TextStyle(
+              //       color: Color(0xFF5DB075),
+              //       fontSize: 16,
+              //       fontWeight: FontWeight.w500),
+              // ),
               Text(
                 'Feed',
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
+
               ),
               Text(
                 'Filter',

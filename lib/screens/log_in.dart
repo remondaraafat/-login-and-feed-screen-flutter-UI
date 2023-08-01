@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import 'feed.dart';
+
 class MyHomePage extends StatefulWidget {
   const MyHomePage({super.key, required this.title});
 
@@ -107,6 +109,7 @@ class _MyHomePageState extends State<MyHomePage> {
               child: ElevatedButton(
                 onPressed: () {
                   // Add your button press logic here
+                  Navigator.push(context, MaterialPageRoute(builder: (context)=>new FeedScreen()));
                 },
                 child: Text('Log In'),
                 style: ElevatedButton.styleFrom(
@@ -123,6 +126,7 @@ class _MyHomePageState extends State<MyHomePage> {
             TextButton(
               onPressed: () {
                 // Add your button press logic here
+
               },
               child: Text('Forgot your passwrd?'),
               style: TextButton.styleFrom(
