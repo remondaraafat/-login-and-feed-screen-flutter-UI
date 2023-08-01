@@ -22,6 +22,7 @@ class FeedScreen extends StatelessWidget {
                 ),
                 onPressed: (){
                   Navigator.of(context).pop();
+                 // Navigator.pop();
                 },
                 child: const Text('Back'),
               ),
@@ -37,12 +38,15 @@ class FeedScreen extends StatelessWidget {
                 style: TextStyle(fontSize: 30, fontWeight: FontWeight.w600),
 
               ),
-              Text(
-                'Filter',
-                style: TextStyle(
-                    color: Color(0xFF5DB075),
-                    fontSize: 16,
-                    fontWeight: FontWeight.w500),
+              TextButton(
+                style: TextButton.styleFrom(
+                  textStyle: const TextStyle(
+                      color: Color(0xFF5DB075),
+                      fontSize: 16,
+                      fontWeight: FontWeight.w500),
+                ),
+                onPressed:null,
+                child: const Text('Filter'),
               ),
             ],
           ),
