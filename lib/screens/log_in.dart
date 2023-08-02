@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
+import 'package:login_and_feed/user.dart';
 
 import 'feed.dart';
 
 class LogInScreen extends StatefulWidget {
+  static final route ="/logIn";
   const LogInScreen({super.key});
 
 
@@ -81,7 +83,7 @@ class _MyHomePageState extends State<LogInScreen> {
               child: ElevatedButton(
                 onPressed: () {
                  // Navigator.push(context, MaterialPageRoute(builder: (context)=>new FeedScreen()));
-                  Navigator.pushNamed(context, 'feed');
+                  Navigator.pushNamed(context, '/feed',arguments: User(email: "remonda@gmail.com",password: 123));
                 },
                 child: Text('Log In'),
                 style: ElevatedButton.styleFrom(

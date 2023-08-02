@@ -15,8 +15,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
      // home: const LogInScreen(),
-      initialRoute: 'logIn',
-      routes: routes,
+      initialRoute: LogInScreen.route,
+      routes: {
+        FeedScreen.route:(context)=>FeedScreen(),
+        LogInScreen.route:(context)=>LogInScreen()
+      },
       //home: const FeedScreen(),
       debugShowCheckedModeBanner: false,
     );

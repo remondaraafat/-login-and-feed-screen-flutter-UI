@@ -1,10 +1,14 @@
 import 'package:flutter/material.dart';
 
+import 'package:login_and_feed/user.dart';
+
 class FeedScreen extends StatelessWidget {
+  static final route="/feed";
   const FeedScreen({super.key});
 
   @override
   Widget build(BuildContext context) {
+    User? user=ModalRoute.of(context)?.settings.arguments as User?;
     return Scaffold(
       body: Column(children: [
         Padding(
@@ -99,7 +103,7 @@ class FeedScreen extends StatelessWidget {
                             //  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                               children: [
                                 Text(
-                                  'Header',
+                                  'Header ${user?.email}',
                                   style: TextStyle(
                                       fontSize: 16,
                                       fontWeight: FontWeight.w600),
@@ -107,7 +111,7 @@ class FeedScreen extends StatelessWidget {
                                 Padding(
                                   padding: const EdgeInsets.only(left: 170),
                                   child: Text(
-                                    '8m ago',
+                                    '8m ago ${user?.password}',
                                     style: TextStyle(
                                         color: Color(0xFFBDBDBD),
                                         fontSize: 14,
